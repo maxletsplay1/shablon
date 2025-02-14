@@ -40,29 +40,16 @@ foreach ($scripts as $script) {
         <!-- Top Bar Menu -->
         <div class="ten columns">
             <ul class="top-bar-menu">
-                <li><i class="fa fa-phone"></i> (564) 123 4567</li>
-                <li><i class="fa fa-envelope"></i> <a href="#"><span class="__cf_email__" data-cfemail="2b464a42476b4e534a465b474e05484446">[email&#160;protected]</span></a></li>
-                <li>
-                    <div class="top-bar-dropdown">
-                        <span>English</span>
-                        <ul class="options">
-                            <li><div class="arrow"></div></li>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Polish</a></li>
-                            <li><a href="#">Deutsch</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="top-bar-dropdown">
-                        <span>USD</span>
-                        <ul class="options">
-                            <li><div class="arrow"></div></li>
-                            <li><a href="#">USD</a></li>
-                            <li><a href="#">PLN</a></li>
-                            <li><a href="#">EUR</a></li>
-                        </ul>
-                    </div>
+                <li><i class="fa fa-phone"></i>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        array(
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH" => SITE_DIR."include/telephone.php"
+                        ),
+                        false
+                    );?>
                 </li>
             </ul>
         </div>
@@ -118,15 +105,7 @@ foreach ($scripts as $script) {
 						);?>
 					</a>
 					<a class="bx-logo-block d-block d-md-none text-center" href="<?=SITE_DIR?>">
-						<?$APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							"",
-							array(
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_DIR."include/company_logo_mobile.php"
-							),
-							false
-						);?>
+
 					</a>
 				</div>
 

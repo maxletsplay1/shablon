@@ -60,7 +60,7 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
             </div>
 
             <nav class="top-search">
-                <form action="#" method="get">
+                <form action="#" method="get" class="">
                     <button><i class="fa fa-search"></i></button>
                     <input class="search-field" type="text" placeholder="Search" value=""/>
                 </form>

@@ -14,6 +14,7 @@
 .menu-and-cart {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: flex-end;
     gap: 10px;
 }
@@ -29,7 +30,9 @@
 #additional-menu ul li {
     display: inline-block;
 }
-
+#cart{
+    margin-top: -14px !important;
+}
 .cart-and-search {
     display: flex;
     align-items: center;
@@ -38,21 +41,25 @@
 
 .top-search form {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    gap: 5px;
 }
 
 .top-search input {
     padding: 5px;
 }
+.row-reverse{
 
+}
 /* Адаптив для мобильных */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         align-items: center;
     }
-
+    #cart{
+        margin-top: 0 !important;
+    }
     .menu-and-cart {
         align-items: center;
     }
