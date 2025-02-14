@@ -39,14 +39,27 @@ foreach ($scripts as $script) {
 
         <!-- Top Bar Menu -->
         <div class="ten columns">
-            <ul class="top-bar-menu">
-                <li><i class="fa fa-phone"></i>
+            <ul style="display: flex" class="top-bar-menu">
+                <li style="display: flex">
+                    <i class="fa fa-phone"></i>
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
                         "",
                         array(
                             "AREA_FILE_SHOW" => "file",
                             "PATH" => SITE_DIR."include/telephone.php"
+                        ),
+                        false
+                    );?>
+                </li>
+                <li style="display: flex">
+                    <i class="fa fa-calendar"></i>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        array(
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH" => SITE_DIR."include/schedule.php"
                         ),
                         false
                     );?>
