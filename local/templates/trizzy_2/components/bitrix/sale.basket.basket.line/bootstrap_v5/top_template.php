@@ -12,13 +12,24 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
 ?>
 
 <div class="container header-container">
+    <script src="<?=SITE_TEMPLATE_PATH?>/burger.js"></script>
+
     <div class="logo">
         <a href="<?=$arParams['PATH_TO_HOME'] ?? '/'?>">
             <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="Trizzy" />
         </a>
     </div>
 
+    <!-- Бургер-кнопка -->
+
+
+
     <div class="menu-and-cart">
+        <button class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div id="additional-menu">
             <ul>
                 <li><a href="<?=$arParams['PATH_TO_BASKET']?>">Корзина</a></li>
@@ -57,4 +68,12 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".burger-menu").addEventListener("click", function () {
+            document.getElementById("additional-menu").classList.toggle("active");
+        });
+    });
+</script>
+
 

@@ -130,27 +130,6 @@ foreach ($scripts as $script) {
 					</a>
 				</div>
 
-				<div class="col-auto d-none d-md-block bx-header-personal">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:sale.basket.basket.line",
-						"bootstrap_v4",
-						array(
-							"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-							"SHOW_PERSONAL_LINK" => "N",
-							"SHOW_NUM_PRODUCTS" => "Y",
-							"SHOW_TOTAL_PRICE" => "Y",
-							"SHOW_PRODUCTS" => "N",
-							"POSITION_FIXED" =>"N",
-							"SHOW_AUTHOR" => "Y",
-							"PATH_TO_REGISTER" => SITE_DIR."login/",
-							"PATH_TO_PROFILE" => SITE_DIR."personal/"
-						),
-						false,
-						array()
-					);?>
-				</div>
-
 				<div class="col bx-header-contact">
 					<div class="d-flex align-items-center justify-content-between justify-content-md-center flex-column flex-sm-row flex-md-column flex-lg-row">
 						<div class="p-lg-3 p-1">
