@@ -1,4 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+define("HIDE_SIDEBAR", "Y");
 IncludeTemplateLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/templates/".SITE_TEMPLATE_ID."/header.php");
 CJSCore::Init(array("fx"));
 
@@ -11,7 +12,6 @@ if (isset($_GET["theme"]) && in_array($_GET["theme"], array("blue", "green", "ye
 $theme = COption::GetOptionString("main", "wizard_eshop_bootstrap_theme_id", "green", SITE_ID);
 
 $curPage = $APPLICATION->GetCurPage(true);
-
 include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 
 ?><!DOCTYPE html>
@@ -197,5 +197,4 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 	<div class="workarea">
 		<div class="container bx-content-section">
 			<div class="row">
-			<?$needSidebar = preg_match("~^".SITE_DIR."(catalog|personal\/cart|personal\/order\/make)/~", $curPage);?>
-				<div class="bx-content <?=($needSidebar ? "col" : "col-md-9 col-sm-8")?>">
+				<div>
