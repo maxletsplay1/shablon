@@ -4,11 +4,20 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 $APPLICATION->SetPageProperty("HIDE_SIDEBAR", "Y");
 
 ?>
+<?$APPLICATION->IncludeComponent(
+    "custom:slider",
+    "",
+    array(
+        "IBLOCK_ID" => 12,
+    ),
+    false
+);
+?>
 <?if (IsModuleInstalled("advertising")):?>
 	<div class="mb-5">
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:advertising.banner",
-			"bootstrap_v4",
+			"bootstrap_v5",
 			array(
 				"COMPONENT_TEMPLATE" => "bootstrap_v4",
 				"TYPE" => "MAIN",
