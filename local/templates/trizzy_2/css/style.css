@@ -2370,7 +2370,7 @@ li.dropdown ul li ul {
     position: absolute;
     display: none;
     top: 0;
-    left: 200px;
+    left: 150px;
     z-index: 100
 }
 

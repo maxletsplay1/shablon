@@ -101,11 +101,10 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 			<!--region bx-header-->
 			<!--endregion-->
 
-			<div class="row mb-4 d-none d-md-block">
-				<div class="col">
+
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:menu",
-						"bootstrap_v4",
+						"bootstrap_v5",
 						array(
 							"ROOT_MENU_TYPE" => "left",
 							"MENU_CACHE_TYPE" => "A",
@@ -123,8 +122,7 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 						),
 						false
 					);?>
-				</div>
-			</div>
+
 			<!--endregion-->
 
 			<!--region search.title -->

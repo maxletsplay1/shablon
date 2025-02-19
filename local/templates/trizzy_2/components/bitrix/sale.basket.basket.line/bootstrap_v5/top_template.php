@@ -43,7 +43,7 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
                         : floatval($arResult['TOTAL_PRICE']);
                     $currency = $arResult['CURRENCY'] ?? 'RUB';
                     ?>
-                    <a href="/personal/cart/" class="button adc">
+                    <a href="/personal/cart/" class="button adc" id="price">
                         <?= CurrencyFormat($totalPrice, $currency) ?>
                     </a>
                 </div>

@@ -18,6 +18,10 @@
 .cart-and-search{
     width: 100%;
 }
+.cart-btn{
+    min-width: calc(100% + 20px);
+    padding: 0 10px 0 0;
+}
 @media screen and (max-width: 768px) {
     .header-flex {
         flex-direction: column;
