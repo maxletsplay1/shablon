@@ -4,11 +4,12 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 $APPLICATION->SetPageProperty("HIDE_SIDEBAR", "Y");
 
 ?>
-<?$APPLICATION->IncludeComponent(
+<?php
+$APPLICATION->IncludeComponent(
     "custom:slider",
     "",
     array(
-        "IBLOCK_ID" => 12,
+        "IBLOCK_ID" => 4,
     ),
     false
 );
