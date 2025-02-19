@@ -11,25 +11,16 @@ $pathToAuthorize = $arParams['PATH_TO_AUTHORIZE'] . (mb_stripos($arParams['PATH_
 $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO_REGISTER'], '?') === false ? '?' : '&') . 'register=yes&backurl='.$currentUrl;
 ?>
 
-<div class="container header-container">
-    <script src="<?=SITE_TEMPLATE_PATH?>/burger.js"></script>
-
-    <div class="logo">
-        <a href="<?=$arParams['PATH_TO_HOME'] ?? '/'?>">
-            <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="Trizzy" />
-        </a>
+<div class="container header-flex">
+    <div class="w-half">
+        <div class="logo">
+            <a href="<?=$arParams['PATH_TO_HOME'] ?? '/'?>">
+                <img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="Trizzy" />
+            </a>
+        </div>
     </div>
-
-    <!-- Бургер-кнопка -->
-
-
-
-    <div class="menu-and-cart">
-        <button class="burger-menu" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <div class="w-half">
+    <div class="cart-menu">
         <div id="additional-menu">
             <ul>
                 <li><a href="<?=$arParams['PATH_TO_BASKET']?>">Корзина</a></li>
@@ -43,7 +34,6 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
                 <?endif;?>
             </ul>
         </div>
-
         <div class="cart-and-search">
             <div id="cart">
                 <div class="cart-btn">
@@ -58,22 +48,13 @@ $pathToRegister = $arParams['PATH_TO_REGISTER'] . (mb_stripos($arParams['PATH_TO
                     </a>
                 </div>
             </div>
-
             <nav class="top-search">
-                <form action="#" method="get" class="">
                     <button><i class="fa fa-search"></i></button>
                     <input class="search-field" type="text" placeholder="Search" value=""/>
-                </form>
             </nav>
         </div>
     </div>
+    </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".burger-menu").addEventListener("click", function () {
-            document.getElementById("additional-menu").classList.toggle("active");
-        });
-    });
-</script>
 
 

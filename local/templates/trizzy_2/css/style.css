@@ -1525,6 +1525,7 @@ span.skill-title i {
 }
 
 .top-search input, .apply-coupon input {
+    height: 40px;
     font-size: 13px;
     width: 192px;
     padding: 10px 13px;
@@ -1611,6 +1612,7 @@ span.skill-title i {
 
 .cart-btn a.button {
     padding: 8px 14px 8px 52px;
+    height: 40px;
     float: left;
     font-weight: 600;
     font-size: 14px;

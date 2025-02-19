@@ -1,76 +1,45 @@
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.menu-and-cart {
+.cart-menu{
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: flex-end;
-    gap: 10px;
 }
-
-#additional-menu ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#additional-menu ul li {
-    display: inline-block;
-}
-#cart{
-    margin-top: -14px !important;
-}
-.cart-and-search {
+.header-flex {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
-
-.top-search form {
-    display: flex;
+.search-field{
+    max-width: 192px !important;
+    width: 100% !important;
+}
+.top-search{
+    display: flex !important;
     flex-direction: row-reverse;
-    align-items: center;
 }
-
-.top-search input {
-    padding: 5px;
+.cart-and-search{
+    width: 100%;
 }
-.row-reverse{
-
-}
-/* Адаптив для мобильных */
-@media (max-width: 768px) {
-    .header-container {
+@media screen and (max-width: 768px) {
+    .header-flex {
         flex-direction: column;
-        align-items: center;
     }
-    #cart{
-        margin-top: 0 !important;
+    .cart-and-search{
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
     }
-    .menu-and-cart {
-        align-items: center;
+    .top-search{
+        flex-grow: 1;
+    }
+    .w-half{
+        width: 100%;
     }
 
-    #additional-menu ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cart-and-search {
-        flex-direction: column;
-        align-items: center;
+}
+@media screen and (min-width: 769px) {
+    .w-half{
+        width: 50%;
     }
 }
+
+
