@@ -171,7 +171,10 @@
 
       showMenu: function() {
         jP.setMenuStyle({
-          display: 'block'
+          display: 'block',
+          padding: '0',
+          'min-height': '100vh',
+          backgroundColor: '#505050'
         });
         jP.setMenuStyle({
           'z-index': '1'

@@ -18,7 +18,7 @@ $menuBlockId = "catalog_menu_".$this->randString();
 <div class="container" id="navcontainer">
     <div class="sixteen columns" id="nav">
 
-        <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
+        <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i>Меню</a>
 
         <nav id="navigation">
             <ul class="menu" id="responsive">
@@ -36,7 +36,7 @@ $menuBlockId = "catalog_menu_".$this->randString();
                             <?= htmlspecialcharsbx($arResult["ALL_ITEMS"][$itemID]["TEXT"]) ?>
                         </a>
                         <?php if ($hasSubmenu) { ?>
-                            <ul style="padding-left: 0">
+                            <ul style="padding-left: 0" class="hide-on-mobile">
                                 <?php foreach ($arColumns as $key => $arRow) { ?>
                                     <?php foreach ($arRow as $itemIdLevel_2 => $arLevel_3) { ?>
                                         <li>
