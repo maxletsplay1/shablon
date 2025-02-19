@@ -29,6 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 </head>
 <body class="bx-background-image bx-theme-<?=$theme?>" <?$APPLICATION->ShowProperty("backgroundImage");?>>
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
+<div id="wrapper">
 <div id="top-bar">
     <div class="container" style="height: 36px">
 

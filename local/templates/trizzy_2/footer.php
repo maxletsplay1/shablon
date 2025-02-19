@@ -179,6 +179,7 @@
         </div>
 
     </div>
+    </div>
 
 <script data-cfasync="false" src="<?= SITE_TEMPLATE_PATH ?>/scripts/email-decode.min.js"></script>
 <script src="<?= SITE_TEMPLATE_PATH ?>/scripts/jquery-1.11.0.min.js"></script>
