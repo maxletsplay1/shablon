@@ -12,14 +12,7 @@ $theme = COption::GetOptionString("main", "wizard_eshop_bootstrap_theme_id", "gr
 
 $curPage = $APPLICATION->GetCurPage(true);
 
-$scriptPath = SITE_TEMPLATE_PATH . "/scripts";
-$scripts = glob($_SERVER["DOCUMENT_ROOT"] . $scriptPath . "/*.js");
-
-foreach ($scripts as $script) {
-    $scriptUrl = str_replace($_SERVER["DOCUMENT_ROOT"], '', $script);
-    echo '<script src="' . $scriptUrl . '"></script>' . PHP_EOL;
-}
-
+include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 
 ?><!DOCTYPE html>
 <html xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>">
@@ -29,6 +22,8 @@ foreach ($scripts as $script) {
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_DIR?>favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/styles.css">
+
 
     <? $APPLICATION->ShowHead(); ?>
 </head>
