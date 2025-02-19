@@ -30,7 +30,7 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 <body class="bx-background-image bx-theme-<?=$theme?>" <?$APPLICATION->ShowProperty("backgroundImage");?>>
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
 <div id="top-bar">
-    <div class="container">
+    <div class="container" style="height: 36px">
 
         <!-- Top Bar Menu -->
         <div class="ten columns">
@@ -99,64 +99,8 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 	<header class="bx-header">
 		<div class="bx-header-section container">
 			<!--region bx-header-->
-			<div class="row pt-0 pt-md-3 mb-3 align-items-center" style="position: relative;">
-				<div class="d-block d-md-none bx-menu-button-mobile" data-role='bx-menu-button-mobile-position'></div>
-				<div class="col-12 col-md-auto bx-header-logo">
-					<a class="bx-logo-block d-none d-md-block" href="<?=SITE_DIR?>">
-						<?$APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							"",
-							array(
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_DIR."include/company_logo.php"),
-							false
-						);?>
-					</a>
-					<a class="bx-logo-block d-block d-md-none text-center" href="<?=SITE_DIR?>">
-
-					</a>
-				</div>
-
-				<div class="col bx-header-contact">
-					<div class="d-flex align-items-center justify-content-between justify-content-md-center flex-column flex-sm-row flex-md-column flex-lg-row">
-						<div class="p-lg-3 p-1">
-							<div class="bx-header-phone-block">
-								<i class="bx-header-phone-icon"></i>
-								<span class="bx-header-phone-number">
-									<?$APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										"",
-										array(
-											"AREA_FILE_SHOW" => "file",
-											"PATH" => SITE_DIR."include/telephone.php"
-										),
-										false
-									);?>
-								</span>
-							</div>
-						</div>
-						<div class="p-lg-3 p-1">
-							<div class="bx-header-worktime">
-								<div class="bx-worktime-title"><?=GetMessage('HEADER_WORK_TIME'); ?></div>
-								<div class="bx-worktime-schedule">
-									<?$APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										"",
-										array(
-											"AREA_FILE_SHOW" => "file",
-											"PATH" => SITE_DIR."include/schedule.php"
-										),
-										false
-									);?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!--endregion-->
 
-			<!--region menu-->
 			<div class="row mb-4 d-none d-md-block">
 				<div class="col">
 					<?$APPLICATION->IncludeComponent(
