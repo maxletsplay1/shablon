@@ -119,7 +119,7 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 							"USE_EXT" => "Y",
 							"DELAY" => "N",
 							"ALLOW_MULTI_SELECT" => "N",
-							"COMPONENT_TEMPLATE" => "bootstrap_v4"
+							"COMPONENT_TEMPLATE" => "bootstrap_v5"
 						),
 						false
 					);?>
@@ -135,7 +135,7 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/.styles.php';
 					<div class="col">
 						<?$APPLICATION->IncludeComponent(
 							"bitrix:search.title",
-							"bootstrap_v4",
+							"bootstrap_v5",
 							array(
 								"NUM_CATEGORIES" => "1",
 								"TOP_COUNT" => "5",

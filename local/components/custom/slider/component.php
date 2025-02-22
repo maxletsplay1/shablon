@@ -30,9 +30,9 @@ while ($slide = $res->Fetch()) {
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="1000">
                             <img src="<?= htmlspecialchars($slide['IMAGE']) ?>" alt="slider-image" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                             <div class="caption dark sfb fadeout" data-x="750" data-y="170" data-speed="400" data-start="800" data-easing="Power4.easeOut">
-                                <h2><?= htmlspecialchars($slide['TITLE']) ?></h2>
+                                <h3><?= htmlspecialchars($slide['TITLE']) ?></h3>
                                 <h3><?= htmlspecialchars($slide['SUBTITLE']) ?></h3>
-                                <a href="<?= htmlspecialchars($slide['LINK']) ?>" class="caption-btn">Shop The Collection</a>
+                                <a href="<?= htmlspecialchars($slide['LINK']) ?>" class="caption-btn">Перейти к новости</a>
                             </div>
                         </li>
                     <?php endforeach; ?>

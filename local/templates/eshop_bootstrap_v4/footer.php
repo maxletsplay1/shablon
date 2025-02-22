@@ -200,7 +200,7 @@
 			</div>
 	</footer>
 	<div class="col d-sm-none">
-		<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "bootstrap_v4", array(
+		<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "bootstrap_v5", array(
 				"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
 				"PATH_TO_PERSONAL" => SITE_DIR."personal/",
 				"SHOW_PERSONAL_LINK" => "N",

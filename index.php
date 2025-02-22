@@ -9,37 +9,12 @@ $APPLICATION->IncludeComponent(
     "custom:slider",
     "",
     array(
-        "IBLOCK_ID" => 4,
+        "IBLOCK_ID" => 1,
     ),
     false
 );
 ?>
-<?if (IsModuleInstalled("advertising")):?>
-	<div class="mb-5">
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:advertising.banner",
-			"bootstrap_v5",
-			array(
-				"COMPONENT_TEMPLATE" => "bootstrap_v4",
-				"TYPE" => "MAIN",
-				"NOINDEX" => "Y",
-				"QUANTITY" => "3",
-				"BS_EFFECT" => "fade",
-				"BS_CYCLING" => "N",
-				"BS_WRAP" => "Y",
-				"BS_PAUSE" => "Y",
-				"BS_KEYBOARD" => "Y",
-				"BS_ARROW_NAV" => "Y",
-				"BS_BULLET_NAV" => "Y",
-				"BS_HIDE_FOR_TABLETS" => "N",
-				"BS_HIDE_FOR_PHONES" => "Y",
-				"CACHE_TYPE" => "A",
-				"CACHE_TIME" => "36000000",
-			),
-			false
-		);?>
-	</div>
-<?endif?>
+
 
 <?
 global $trendFilter;
@@ -48,7 +23,7 @@ $trendFilter = array('PROPERTY_TREND' => '4');
 <h2>Тренды сезона</h2>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
-	"bootstrap_v4",
+	"bootstrap_v5",
 	array(
 		"IBLOCK_TYPE_ID" => "catalog",
 		"IBLOCK_ID" => "2",

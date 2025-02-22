@@ -61,7 +61,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 				<div class="col-auto d-none d-md-block bx-header-personal">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:sale.basket.basket.line",
-						"bootstrap_v4",
+						"bootstrap_v5",
 						array(
 							"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
 							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
@@ -123,7 +123,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 				<div class="col">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:menu",
-						"bootstrap_v4",
+						"bootstrap_v5",
 						array(
 							"ROOT_MENU_TYPE" => "left",
 							"MENU_CACHE_TYPE" => "A",
@@ -137,7 +137,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 							"USE_EXT" => "Y",
 							"DELAY" => "N",
 							"ALLOW_MULTI_SELECT" => "N",
-							"COMPONENT_TEMPLATE" => "bootstrap_v4"
+							"COMPONENT_TEMPLATE" => "bootstrap_v5"
 						),
 						false
 					);?>
@@ -154,7 +154,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 					<div class="col">
 						<?$APPLICATION->IncludeComponent(
 							"bitrix:search.title",
-							"bootstrap_v4",
+							"bootstrap_v5",
 							array(
 								"NUM_CATEGORIES" => "1",
 								"TOP_COUNT" => "5",
