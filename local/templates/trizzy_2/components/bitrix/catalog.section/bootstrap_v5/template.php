@@ -113,9 +113,6 @@ $containerName = 'container-'.$navParams['NavNum'];
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_THEME'] : '';
 
 ?>
-
-
-        ?>
         <div class="twelve columns products" data-entity="<?=$containerName?>">
             <!-- items-container -->
             <?
